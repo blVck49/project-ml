@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+https://circleci.com/gh/medhatmamdouh/project-ml/tree/circleci-project-setup.svg?style=svg
 
 ## Project Overview
 
