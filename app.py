@@ -13,7 +13,7 @@ LOG.setLevel(logging.INFO)
 def scale(payload):
     """Scales Payload"""
     
-    LOG.info(f"Scaling Payload: \n{payload}")
+    LOG.info(f"Scaling Payload: \n % {payload}")
     scaler = StandardScaler().fit(payload.astype(float))
     scaled_adhoc_predict = scaler.transform(payload.astype(float))
     return scaled_adhoc_predict
@@ -62,7 +62,7 @@ def predict():
     scaled_payload = scale(inference_payload)
     # get an output prediction from the pretrained model, clf
     prediction = list(clf.predict(scaled_payload))
-    # TO DO:  Log the output prediction value
+    LOG.info(f"Prediction value: {prediction[0]}") 
     return jsonify({'prediction': prediction})
 
 if __name__ == "__main__":
