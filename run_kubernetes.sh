@@ -5,12 +5,12 @@
 # Step 1:
 # This is your Docker ID/path
 # dockerpath=<>
-dockerpath=medhat16/prediction
+dockerpath=medhat16/predict
 
 # Step 2
 # Run the Docker Hub container with kubernetes
 
-kubectl run prediction --image=$dockerpath
+kubectl run predict --image=$dockerpath
 
 
 # Step 3:
@@ -20,5 +20,5 @@ kubectl get pods --all-namespaces
 
 # Step 4:
 # Forward the container port to a host
-
-kubectl port-forward deployment/prediction 8080:80
+kubectl port-forward deployment/predict  8080:8080 
+#kubectl expose deployment predict --type=LoadBalancer --port=8080:80

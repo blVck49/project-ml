@@ -5,13 +5,13 @@
 
 # Step 1:
 # Create dockerpath
-dockerpath=medhat16/prediction
+dockerpath=medhat16/udacity
 docker login
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-docker tag prediction:latest $dockerpath:latest
+docker tag predict:latest $dockerpath
 
 # Step 3:
 # Push image to a docker repository
