@@ -13,4 +13,4 @@ docker image ls
 # Step 3: 
 # Run flask app
 #docker run -p 8080 predict
-docker run -it -p 8080:8080 predict
+docker run -it -p 8080:8080 prediction
