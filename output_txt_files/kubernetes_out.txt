@@ -1,1 +1,46 @@
-<paste log output from Kubernetes-mediated prediction, here>
+Flag --generator has been deprecated, has no effect and will be removed in the future.
+Error from server (AlreadyExists): pods "predections" already exists
+NAMESPACE     NAME                                                  READY   STATUS    RESTARTS   AGE
+default       api                                                   1/1     Running   0          27h
+default       predection                                            1/1     Running   0          4h12m
+default       predections                                           1/1     Running   1          4h6m
+default       predict                                               1/1     Running   0          28h
+default       predictions-77c8c75684-j2pfl                          1/1     Running   0          25m
+default       predictis                                             1/1     Running   0          28h
+kube-system   coredns-66bff467f8-6mbkw                              1/1     Running   1          29h
+kube-system   coredns-66bff467f8-mz589                              1/1     Running   1          29h
+kube-system   etcd-ip-172-31-39-9.ec2.internal                      1/1     Running   1          29h
+kube-system   kube-apiserver-ip-172-31-39-9.ec2.internal            1/1     Running   1          29h
+kube-system   kube-controller-manager-ip-172-31-39-9.ec2.internal   1/1     Running   1          29h
+kube-system   kube-proxy-mzntv                                      1/1     Running   1          29h
+kube-system   kube-scheduler-ip-172-31-39-9.ec2.internal            1/1     Running   1          29h
+kube-system   storage-provisioner                                   1/1     Running   1          29h
+Forwarding from 127.0.0.1:8080 -> 80
+Forwarding from [::1]:8080 -> 80
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+
+
+-------------------
+(.devops) [root@ip-172-31-39-9 project-ml]# ./make_prediction.sh 
+Port: 8080
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+(.devops) [root@ip-172-31-39-9 project-ml]# ./make_prediction.sh 
+Port: 8080
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+(.devops) [root@ip-172-31-39-9 project-ml]# ./make_prediction.sh 
+Port: 8080
+{
+  "prediction": [
+    20.35373177134412
+  ]
+
